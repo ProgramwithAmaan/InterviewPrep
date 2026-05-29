@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interview Prep - Your Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="header-tag">PREP MODE</div>
+  <div class="header-info">
+    <h1>Interview Question Bank</h1>
+    <p>B.Tech CSE · MERN Stack Developer</p>
+  </div>
+  <div class="stats">
+    <div class="stat">
+      <span class="stat-num" id="total-count">35</span>
+      <span class="stat-label">Questions</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="done-count">0</span>
+      <span class="stat-label">Practiced</span>
+    </div>
+  </div>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" id="progress-bar"></div>
+  </div>
+</header>
+
+<main>
+  <div class="toolbar">
+    <div class="search-wrap">
+      <input id="search-input" class="search-input" type="search" placeholder="Search questions, keywords or answers..." oninput="renderQuestions()">
+    </div>
+    <div class="toolbar-actions">
+      <button class="btn" onclick="resetProgress()">Reset progress</button>
+      <button id="practiced-btn" class="btn secondary" onclick="togglePracticedOnly()">Practiced only</button>
+    </div>
+  </div>
+  <div class="toolbar-note" id="result-info">Showing all questions</div>
+
+  <div class="category-tabs">
+    <button class="tab active" data-cat="all" onclick="filterCat('all', this)">All</button>
+    <button class="tab" data-cat="hr" onclick="filterCat('hr', this)">HR / Intro</button>
+    <button class="tab" data-cat="tech" onclick="filterCat('tech', this)">Technical</button>
+    <button class="tab" data-cat="cs" onclick="filterCat('cs', this)">CS Concepts</button>
+    <button class="tab" data-cat="project" onclick="filterCat('project', this)">Projects</button>
+    <button class="tab" data-cat="behav" onclick="filterCat('behav', this)">Behavioural</button>
+  </div>
+
+  <div id="questions-container"></div>
+</main>
+
+<footer class="page-footer">
+  <div>Built with plain HTML, CSS, and JavaScript for interview practice.</div>
+  <div>Saved locally in your browser. Last updated <span id="footer-year"></span>. Built by Amaan Saifi</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
